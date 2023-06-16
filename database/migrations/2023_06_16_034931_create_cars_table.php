@@ -22,9 +22,11 @@ return new class extends Migration
             $table->string('price_id');
             $table->string('currency')->default('USD');
             $table->decimal('price', 10, 2);
+            $table->text('image');
+            $table->text('payment_url');
             $table->text('description');
-            $table->boolean('is_active');
-            $table->boolean('is_featured');
+            $table->boolean('is_active')->default(true);
+            $table->boolean('is_featured')->default(false);
             $table->timestamps();
         });
     }
