@@ -23,4 +23,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/create-cars', [CarController::class, 'store']);
 });
 
+Route::get('/collection/search', [CarController::class, 'search'])->name('car.search');
+Route::get('/collection', [CarController::class, 'show'])->name('products');
+Route::view('/about', 'about')->name('about');
+
 require __DIR__.'/auth.php';

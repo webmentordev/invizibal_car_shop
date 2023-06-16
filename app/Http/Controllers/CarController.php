@@ -67,7 +67,28 @@ class CarController extends Controller
             'image' => $request->image->store('product_images', 'public_disk'),
             'payment_url' => $paymentlink['url']
         ]);
-
         return back()->with('success', 'Product/Car has been created!');
+    }
+
+    public function search(Request $request){
+        $this->validate($request, [
+            'search' => 'required'
+        ]);
+        $search = $request->search;
+        $result = Car::where('name', 'LIKE', '%'.$search.'%')
+                        ->orWhere('model', 'LIKE', '%'.$search.'%')
+                        ->orWhere('company', 'LIKE', '%'.$search.'%')
+                        ->orWhere('year', 'LIKE', '%'.$search.'%')->paginate(100);
+        return view('products', [
+            'cars' => $result,
+            'search' => 'All Products have been fetched!'
+        ]);
+    }
+
+    public function show(){
+        $result = Car::latest()->paginate(100);
+        return view('products', [
+            'cars' => $result
+        ]);
     }
 }
