@@ -29,6 +29,8 @@ Route::get('/collection', [CarController::class, 'show'])->name('products');
 Route::view('/about', 'about')->name('about');
 
 Route::get('/checkout/{slug}', [CheckoutController::class, 'index'])->name('checkout');
-Route::post('/checkout/{slug}', [CheckoutController::class, 'store'])->name('checkout.store');
+Route::post('/checkout/{order}', [CheckoutController::class, 'store'])->name('checkout.store');
+Route::get('/success/{checkout:order_id}', [CheckoutController::class, 'success']);
+Route::get('/cancel/{checkout:order_id}', [CheckoutController::class, 'cancel']);
 
 require __DIR__.'/auth.php';

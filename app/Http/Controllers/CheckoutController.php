@@ -78,4 +78,29 @@ class CheckoutController extends Controller
             abort(404, 'Not found!');
         }
     }
+
+
+    public function success(Checkout $checkout){
+        if($checkout->status != 'pending'){
+            abort(404, 'Not found!');
+        }
+        $checkout->status = 'completed';
+        $checkout->paid = true;
+        $checkout->save();
+        return view('success', [
+            'data' => $checkout
+        ]);
+    }
+
+    public function cancel(Checkout $checkout){
+        if($checkout->status != 'pending'){
+            abort(404, 'Not found!');
+        }
+        $checkout->status = 'cancelled';
+        $checkout->paid = false;
+        $checkout->save();
+        return view('cancel', [
+            'data' => $checkout
+        ]);
+    }
 }

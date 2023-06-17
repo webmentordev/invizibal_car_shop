@@ -3,8 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-use Stripe\Product;
+use Illuminate\Database\Eloquent\Model;;
 
 class Checkout extends Model
 {
@@ -23,7 +22,7 @@ class Checkout extends Model
         'checkout_url'
     ];
 
-    public function product(){
-        return $this->belongsTo(Product::class);
+    public function car(){
+        return $this->belongsTo(Car::class);
     }
 }
