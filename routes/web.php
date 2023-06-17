@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CarController;
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,5 +27,8 @@ Route::middleware('auth')->group(function () {
 Route::get('/collection/search', [CarController::class, 'search'])->name('car.search');
 Route::get('/collection', [CarController::class, 'show'])->name('products');
 Route::view('/about', 'about')->name('about');
+
+Route::get('/checkout/{slug}', [CheckoutController::class, 'index'])->name('checkout');
+Route::post('/checkout/{slug}', [CheckoutController::class, 'store'])->name('checkout.store');
 
 require __DIR__.'/auth.php';

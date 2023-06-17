@@ -40,19 +40,6 @@ class CarController extends Controller
             'currency' => $request->currency,
             'product' => $product['id'],
         ]);
-        $paymentlink = $stripe->paymentLinks->create([
-            'line_items' => [
-                [
-                    'price' => $price['id'],
-                    'quantity' => 1
-                ],
-            ],
-            "phone_number_collection" => [
-                "enabled" => true
-            ],
-            'allow_promotion_codes' => true
-        ]);
-
         Car::create([
             'name' => $request->name,
             'slug' => str_replace(' ', '-', strtolower($request->name.'-'.$request->model.'-'.$request->year)),
@@ -64,8 +51,7 @@ class CarController extends Controller
             'currency' => $request->currency,
             'price' => $request->price,
             'description' => $request->description,
-            'image' => $request->image->store('product_images', 'public_disk'),
-            'payment_url' => $paymentlink['url']
+            'image' => $request->image->store('product_images', 'public_disk')
         ]);
         return back()->with('success', 'Product/Car has been created!');
     }

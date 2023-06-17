@@ -23,7 +23,6 @@ return new class extends Migration
             $table->string('currency')->default('USD');
             $table->decimal('price', 10, 2);
             $table->text('image');
-            $table->text('payment_url');
             $table->text('description');
             $table->boolean('is_active')->default(true);
             $table->boolean('is_featured')->default(false);

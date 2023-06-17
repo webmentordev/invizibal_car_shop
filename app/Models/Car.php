@@ -22,7 +22,6 @@ class Car extends Model
         'description',
         'is_featured',
         'is_active',
-        'image',
-        'payment_url'
+        'image'
     ];
 }
