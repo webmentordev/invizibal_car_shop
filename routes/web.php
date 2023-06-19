@@ -3,6 +3,7 @@
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ProfileController;
+use App\Mail\Orders;
 use Illuminate\Support\Facades\Route;
 
 
@@ -32,5 +33,9 @@ Route::get('/checkout/{slug}', [CheckoutController::class, 'index'])->name('chec
 Route::post('/checkout/{order}', [CheckoutController::class, 'store'])->name('checkout.store');
 Route::get('/success/{checkout:order_id}', [CheckoutController::class, 'success']);
 Route::get('/cancel/{checkout:order_id}', [CheckoutController::class, 'cancel']);
+
+Route::get('/email', function(){
+    return new Orders();
+});
 
 require __DIR__.'/auth.php';

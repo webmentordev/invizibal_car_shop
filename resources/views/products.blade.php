@@ -15,7 +15,7 @@
         @if (count($cars))
             <div class="max-w-6xl m-auto py-12 px-4 grid grid-cols-3 gap-6">
                 @foreach ($cars as $car)
-                    <div class="p-4 rounded-lg bg-white relative">
+                    <div class="p-4 rounded-lg bg-white relative" data-aos="fade-up" data-aos-duration="1000">
                         <span class="absolute top-6 left-6 bg-main text-black rounded-xl p-1 px-4 font-semibold">{{ $car->year }}</span>
                         <img class="rounded-lg lazyload" data-src="{{ asset('/storage/'. $car->image) }}" alt="{{ $car->name }} image" loading="lazy">
                         <div class="p-2 py-3">
