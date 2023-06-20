@@ -1,6 +1,6 @@
 @extends('layouts.apps')
 @section('content')
-    <header class="min-h-[600px] bg-cover bg-center relative flex items-center justify-center" style="background-image: url('{{ asset('assets/images/products.jpg') }}')">
+    <header class="min-h-[600px] bg-cover bg-center relative flex items-center justify-center" data-parallax="scroll" data-image-src="{{ asset('assets/images/products.jpg') }}">
         <div class="overlay"></div>
         <div class="relative z-10 max-w-3xl w-full">
             <h1 class="text-4xl mb-6 font-semibold text-white title text-center">INVIZIBAL COLLECTION</h1>

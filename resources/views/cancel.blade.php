@@ -4,9 +4,7 @@
         <div class="max-w-xl m-auto py-12 px-4">
             <div class="bg-white rounded-xl p-6 shadow-md">
                 <div class="border-b border-gray-200 flex flex-col">
-                    <div class="rounded-full p-3 bg-[#0eb941]/80">
-                        <img src="https://api.iconify.design/gridicons:cross-circle.svg?color=%23d83013" width="60" class="m-auto mb-3" alt="Check Icon">
-                    </div>
+                    <img src="https://api.iconify.design/gridicons:cross-circle.svg?color=%23d83013" width="60" class="m-auto mb-3" alt="Check Icon">
                     <span class="text-center mb-6 font-semibold">Order has been cancelled!</span>
                 </div>
                 <div class="py-3">

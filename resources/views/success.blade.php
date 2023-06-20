@@ -12,9 +12,10 @@
                     <p class="py-3 title text-sm flex itemcs-center justify-between"><strong>Product</strong> Car Window Shades</p>
                     <p class="py-3 title text-sm flex itemcs-center justify-between"><strong>Car Model</strong> {{ $data->car->name }}</p>
                     <p class="py-3 title text-sm flex itemcs-center justify-between"><strong>Payment Method</strong> Stripe Payment</p>
+                    <p class="py-3 title text-sm flex itemcs-center justify-between"><strong>Quantity</strong> {{ $data->quantity }} Packs</p>
                     <p class="py-3 title text-sm flex itemcs-center justify-between"><strong>Status</strong> <span class="text-green-600 font-semibold">Success</span></p>
                     <p class="py-3 title text-sm flex itemcs-center justify-between"><strong>Created</strong> {{ $data->created_at->format('D d/m/Y h:i:s A') }} (UTC)</p>
-                    <p class="py-3 border-t border-gray-200 title text-sm flex itemcs-center justify-between"><strong>Total Amount</strong> ${{ $data->car->price }}</p>
+                    <p class="py-3 border-t border-gray-200 title text-sm flex itemcs-center justify-between"><strong>Total Amount</strong> ${{ $data->sub_total }}</p>
                 </div>
                 <p class="text-gray-500 bg-gray-100 rounded-xl p-6 text-sm">Thank you so much for your recent order with us! We truly appreciate your business and the trust you have placed in our company</p>
             </div>

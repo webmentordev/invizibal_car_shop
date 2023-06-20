@@ -23,6 +23,9 @@ return new class extends Migration
             $table->string('status')->default('pending');
             $table->text('checkout_url');
             $table->text('checkout_id');
+            $table->text('shipping');
+            $table->bigInteger('quantity')->nullable();
+            $table->decimal('sub_total', 10, 2)->nullable();
             $table->timestamps();
         });
     }

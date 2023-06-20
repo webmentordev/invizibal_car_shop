@@ -19,7 +19,10 @@ class Checkout extends Model
         'paid',
         'status',
         'checkout_id',
-        'checkout_url'
+        'checkout_url',
+        'shipping',
+        'quantity',
+        'sub_total'
     ];
 
     public function car(){

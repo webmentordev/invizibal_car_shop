@@ -3,22 +3,23 @@
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
+use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
-use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Mail\Mailables\Envelope;
+use Illuminate\Contracts\Queue\ShouldQueue;
 
 class Orders extends Mailable
 {
     use Queueable, SerializesModels;
-
+    public $data;
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public function __construct($request)
     {
-        //
+        $this->data = $request;
     }
 
     /**
@@ -27,7 +28,8 @@ class Orders extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Orders',
+            subject: 'Orders Confirmation',
+            from: new Address('support@invizibal.com', 'INVIZIAL')
         );
     }
 
@@ -38,6 +40,9 @@ class Orders extends Mailable
     {
         return new Content(
             markdown: 'emails.orders',
+            with: [
+                'data' => $this->data
+            ],
         );
     }
 
