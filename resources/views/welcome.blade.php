@@ -5,13 +5,13 @@
         <div class="relative z-10 max-w-3xl w-full">
             <h1 class="text-6xl mb-6 font-semibold text-white title text-center">Welcome To INVIZIBAL<br><span class="text-5xl">Car Window Shades</span></h1>
             <form action="{{ route('car.search') }}" method="GET" class="bg-gray-100 p-2 rounded-2xl w-full flex">
-                <input type="search" name="search" class="py-3 px-4 bg-white rounded-2xl w-full border-none outline-none" placeholder="Search with Car model or Name...">
-                <button class="bg-main text-black rounded-2xl ml-2 py-2 px-6">Search</button>
+                <input type="search" name="search" class="py-3 px-4 bg-white rounded-2xl w-full border-none outline-none" placeholder="Search by car model, name or year...">
+                <button class="bg-main text-white rounded-2xl ml-2 py-2 px-6">Search</button>
             </form>
         </div>
     </header>
 
-    <section class="w-full bg-white">
+    <section class="w-full">
         <div class="max-w-6xl m-auto py-[80px] px-4">
             <h2 class="text-4xl font-bold text-center mb-6 leading-8">We're Ensuring The Best <span class="text-3xl"><br>Customer <span class="text-main">Experience</span></span></h2>
             <div class="grid grid-cols-2 gap-6 py-6">
@@ -29,6 +29,8 @@
             </div>
         </div>
     </section>
+
+    <x-featured />
 
     <x-why-choose-us />
 @endsection
