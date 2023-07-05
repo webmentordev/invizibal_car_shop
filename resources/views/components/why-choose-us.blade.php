@@ -4,7 +4,7 @@
             <h2 class="text-4xl font-bold mb-6">Why Choose <span class="text-main">INVIZIBAL!</span></h2>
             <p class="text-gray-500 text-sm leading-6">Dramatically plagiarize cost effective products and impactful action items.<br>Creadibly impactful sources before frictionless.</p>
         </div>
-        <div class="grid grid-cols-3 gap-6">
+        <div class="grid grid-cols-3 gap-6 610px:grid-cols-1 950px:grid-cols-2">
             <div class="bg-white p-8 rounded-lg border border-gray-100 hover:shadow-lg transition-all" data-aos="fade-up" data-aos-duration="1000">
                 <div class="bg-main/10 p-3 w-fit mb-3 rounded-md">
                     <img src="https://api.iconify.design/tabler:bulb-filled.svg?color=%23CB0B17" width="25" alt="Idea Logo">

@@ -2,10 +2,10 @@
 @section('content')
     <header class="min-h-[600px] bg-cover bg-center relative flex items-center justify-center" data-parallax="scroll" data-image-src="{{ asset('assets/images/products.jpg') }}">
         <div class="overlay"></div>
-        <div class="relative z-10 max-w-3xl w-full">
+        <div class="relative z-10 max-w-3xl w-full px-4">
             <h1 class="text-4xl mb-6 font-semibold text-white title text-center">INVIZIBAL COLLECTION</h1>
-            <form action="{{ route('car.search') }}" method="GET" class="bg-gray-100 p-2 rounded-2xl w-full flex">
-                <input type="search" name="search" class="py-3 px-4 bg-white rounded-2xl w-full border-none outline-none" placeholder="Search by car model, name or year...">
+            <form action="{{ route('car.search') }}" method="GET" class="bg-gray-100 bg-opacity-30 backdrop-blur-sm p-2 rounded-2xl w-full flex">
+                <input type="search" name="search" class="py-3 px-4 bg-white rounded-2xl bg-opacity-80 backdrop-blur-sm w-full border-none outline-none" placeholder="Search by car model, name or year...">
                 <button class="bg-main text-white rounded-2xl ml-2 py-2 px-6">Search</button>
             </form>
         </div>

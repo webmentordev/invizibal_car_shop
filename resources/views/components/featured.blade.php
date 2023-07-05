@@ -6,7 +6,7 @@
         </div>
     </div>
     @if (count($cars))
-        <div class="max-w-6xl m-auto py-12 px-4 grid grid-cols-3 gap-6">
+        <div class="max-w-6xl m-auto py-12 px-4 grid grid-cols-3 gap-6 610px:grid-cols-1 950px:grid-cols-2">
             @foreach ($cars as $car)
                 <div class="p-4 rounded-lg bg-gray-100 relative" data-aos="fade-up" data-aos-duration="1000">
                     <span class="absolute top-6 left-6 bg-main text-white rounded-xl p-1 px-4 font-semibold">{{ $car->year }}</span>
