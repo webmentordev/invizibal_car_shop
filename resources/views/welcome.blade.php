@@ -13,8 +13,8 @@
 
     <section class="w-full">
         <div class="max-w-7xl m-auto py-[80px] px-4">
-            <h2 class="text-5xl font-bold text-center mb-6 leading-8">We're Ensuring The Best <span class="text-3xl"><br>Customer <span class="text-main">Experience</span></span></h2>
-            <div class="grid grid-cols-3 gap-6 py-6">
+            <h2 class="text-5xl font-bold text-center mb-6 leading-8 640px:text-3xl">We're Ensuring The Best <span class="text-3xl"><br>Customer <span class="text-main">Experience</span></span></h2>
+            <div class="grid grid-cols-3 gap-6 py-6 900px:grid-cols-2 610px:grid-cols-1 610px:max-w-lg m-auto">
                 <div class="flex flex-col justify-center">
                     <div class="text-end w-fit mb-6">
                         <div class="flex">
@@ -27,7 +27,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="text-end w-fit">
                         <div class="flex">
                             <div class="flex flex-col px-2">
@@ -39,8 +38,11 @@
                             </div>
                         </div>
                     </div>
+                    <img src="{{ asset('assets/images/shades.png') }}" class="w-full max-w-[60%] m-auto my-6" alt="Window Shades">
                 </div>
-                <img src="{{ asset('assets/images/car.png') }}" class="w-full max-w-[60%] m-auto" alt="Window Shades">
+                
+                <img src="{{ asset('assets/images/car.png') }}" class="w-full max-w-[60%] m-auto 900px:hidden" alt="Window Shades">
+                
                 <div class="flex flex-col justify-center">
                     <div class="text-start w-fit mb-6">
                         <div class="flex">
@@ -51,7 +53,6 @@
                                 <h2 class="font-semibold text-lg mb-2">UV Protextion</h2>
                                 <p class="text-gray-600 text-sm">Shield yourself from harmful UV rays with our Cabin Temperature Window Shades</p>
                             </div>
-                            
                         </div>
                     </div>
                     <div class="text-start w-fit">
@@ -65,6 +66,7 @@
                             </div>
                         </div>
                     </div>
+                    <img src="{{ asset('assets/images/shades.png') }}" class="w-full max-w-[60%] m-auto 610px:hidden" alt="Window Shades">
                 </div>
             </div>
         </div>

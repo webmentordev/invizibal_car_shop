@@ -13,9 +13,15 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     </head>
     <body class="font-sans antialiased">
-        <x-navbar />
+        @if (!Request::is('contact'))
+            <x-navbar />
+        @endif
+
         @yield('content')
-        <x-footer />
+        
+        @if (!Request::is('contact'))
+            <x-footer />
+        @endif
     </body>
     <script>
         AOS.init();

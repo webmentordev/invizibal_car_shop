@@ -2,8 +2,8 @@
 
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProfileController;
-use App\Mail\Orders;
 use Illuminate\Support\Facades\Route;
 
 
@@ -14,6 +14,10 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+
+Route::get('contact', [ContactController::class, 'index'])->name('contact');
+Route::post('contact', [ContactController::class, 'store'])->middleware(['throttle:60,1']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -33,9 +37,5 @@ Route::get('/checkout/{slug}', [CheckoutController::class, 'index'])->name('chec
 Route::post('/checkout/{order}', [CheckoutController::class, 'store'])->name('checkout.store');
 Route::get('/success/{checkout:order_id}', [CheckoutController::class, 'success']);
 Route::get('/cancel/{checkout:order_id}', [CheckoutController::class, 'cancel']);
-
-Route::get('/email', function(){
-    return new Orders();
-});
 
 require __DIR__.'/auth.php';

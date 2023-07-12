@@ -15,11 +15,20 @@ export default {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
             screens: {
+                "1230px": {
+                    "max": "1230px"
+                },
                 "950px": {
                     "max": "950px"
                 },
+                "900px": {
+                    "max": "900px"
+                },
                 "820px": {
                     "max": "820px"
+                },
+                "640px": {
+                    "max": "640px"
                 },
                 "610px": {
                     "max": "610px"

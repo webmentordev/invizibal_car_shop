@@ -4,7 +4,8 @@
         <ul class="font-semibold 820px:hidden">
             <a class="px-5" href="{{ route('home') }}">Home</a>
             <a class="px-5" href="{{ route('products') }}">Collection</a>
-            <a class="pl-5" href="{{ route('about') }}">About</a>
+            <a class="px-5" href="{{ route('about') }}">About</a>
+            <a class="pl-5" href="{{ route('contact') }}">Contact</a>
         </ul>
         <div x-data="{ open: false }" class="hidden 820px:block">
             <img x-on:click="open = !open" src="https://api.iconify.design/uis:align-center.svg?color=%23cb0b17" width="35" alt="Burger Icon">
@@ -14,6 +15,7 @@
                     <a class="px-6 py-3 bg-gray-200 mb-2" href="{{ route('home') }}">Home</a>
                     <a class="px-6 py-3 bg-gray-200 mb-2" href="{{ route('products') }}">Collection</a>
                     <a class="px-6 py-3 bg-gray-200 mb-2" href="{{ route('about') }}">About</a>
+                    <a class="px-6 py-3 bg-gray-200 mb-2" href="{{ route('contact') }}">Contact</a>
                 </ul>
             </div>
         </div>
